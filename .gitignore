@@ -1,0 +1,23 @@
+## How to do the set up
+
+1. NPM init, select these options:
+package name: (mern-app)
+version: (1.0.0)
+description: First MERN app - Shopping List
+entry point: (index.js) server.js
+test command:
+git repository: (https://github.com/stephangriesel/mern-app.git)
+keywords:
+author: Stephan Griesel
+license: (ISC) MIT
+
+2. Install dependencies
+npm i express body-parser mongoose concurrently
+
+3. Install Nodemon, reloads and check backend automatically. 
+Install with switch -D which is dev dependency and will not be used in 
+production
+
+4. Update scripts in package.json
+    "start": "node server.js",
+    "server": "nodemon server.js"
