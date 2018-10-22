@@ -1,5 +1,6 @@
 .gitignore
 node_modules
+./config/keys
 
 ## How to do the set up
 
