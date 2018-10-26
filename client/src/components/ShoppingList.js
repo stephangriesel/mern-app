@@ -19,7 +19,7 @@ class ShoppingList extends Component {
             <Container>
                 <Button 
                 color="dark" 
-                style={{marginBottom:'2rem'}}
+                style={{marginBottom:'3rem'}}
                 onClick={() => {
                     const name = prompt('Enter Item');
                     if(name) {
@@ -29,6 +29,19 @@ class ShoppingList extends Component {
                     }
                 }}
                 >+ Item</Button>
+                <ListGroup>
+                    <TransitionGroup className="shopping-list">
+                    {items.map(({
+                        id, name }) => (
+                            <CSSTransition key={id} timeout={500} classNames="fade">
+                            <ListGroupItem>
+                                {name}
+                            </ListGroupItem>
+                            </CSSTransition>
+                        )
+                    )}
+                    </TransitionGroup>
+                </ListGroup>
             </Container>
         );
     }
