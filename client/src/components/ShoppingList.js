@@ -19,7 +19,7 @@ class ShoppingList extends Component {
             <Container>
                 <Button 
                 color="dark" 
-                style={{marginBottom:'3rem'}}
+                style={{marginTop:'2rem', marginBottom:'2rem'}}
                 onClick={() => {
                     const name = prompt('Enter Item');
                     if(name) {
