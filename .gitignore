@@ -5,6 +5,7 @@ node_modules
 ## Notes
 
 start server: npm run server
+concurrently: npm run dev
 
 ## How to do the set up
 
