@@ -13,7 +13,7 @@ export const deleteItem = (id) => {
     };
 };
 
-export const addItem = item => {
+export const addItems = item => {
     return {
         type:ADD_ITEM,
         payload:item

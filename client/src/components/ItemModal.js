@@ -29,21 +29,6 @@ class ItemModal extends Component {
         this.setState({[e.target.name]: e.target.value});
     };
 
-    onSubmit = e => {
-        e.preventDefault();
-
-        const newItem = {
-            id: uuid(),
-            name: this.state.name
-
-            // + Item with addItem action
-            this.props.addItem(newItem);
-
-            // Close 
-            this.toggle();
-        }
-    }
-
     render() {
         return(
             <div>
