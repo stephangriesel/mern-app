@@ -29,6 +29,21 @@ class ItemModal extends Component {
         this.setState({[e.target.name]: e.target.value});
     };
 
+    onSubmit = e => {
+        e.preventDefault();
+
+        const newItem = {
+            id: uuid(),
+            name: this.state.name
+        }
+
+        // Add item with action
+        this.props.addItem(newItem);
+
+        // Close modal
+        this.toggle();
+    };
+
     render() {
         return(
             <div>
@@ -55,7 +70,10 @@ class ItemModal extends Component {
                             placeholder="Add Item" 
                             onChange={this.onChange} 
                             />
-                            <Button color="dark" style={{marginTop: '2rem'}} block>+ Item</Button>
+                            <Button 
+                            color="dark" 
+                            style={{marginTop: '2rem'}} 
+                            block>+ Item</Button>
                         </FormGroup>
                         </Form>
                     </ModalBody>
@@ -65,4 +83,8 @@ class ItemModal extends Component {
     }
 }
 
-export default connect()(ItemModal);
+const mapStateToProps = state => ({
+    item: state.item
+});
+
+export default connect(mapStateToProps, { addItem })(ItemModal);
