@@ -22,9 +22,16 @@
 }
 
 .container {
-    margin:20px;
+    margin:10px;
 }
 
 .navbar {
     margin-bottom:20px;
+}
+
+@media (max-width: 815px) {
+    body {
+        background: #000;
+        width: 100%;
+    }
 }
